@@ -1,9 +1,8 @@
 import React from 'react';
 
-
 export const decorators = [
   (Story) => (
-    <div style={{ width: '100vw', height: '100vh', padding: '4rem' }}>
+    <div style={{ padding: '3rem' }}>
       <Story />
     </div>
   ),
