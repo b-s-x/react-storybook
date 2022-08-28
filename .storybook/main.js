@@ -1,3 +1,6 @@
+const path = require("path");
+const { mergeConfig } = require('vite');
+
 module.exports = {
   stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
@@ -9,5 +12,21 @@ module.exports = {
   },
   features: {
     storyStoreV7: true,
+  },
+  resolve: {
+    alias: [
+      {
+        find: "@",
+        replacement: path.resolve(__dirname, "src"),
+      },
+    ],
+  },
+  async viteFinal(config) {
+    const mergedConfig = mergeConfig(config, {
+      resolve: {
+        alias: { '@': path.resolve(__dirname, '../src/') },
+      },
+    });
+    return mergedConfig;
   },
 };
