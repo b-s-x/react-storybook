@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "start-storybook -p 6006"
+    "book": "start-storybook -p 6006"
   },
   "dependencies": {
     "framer-motion": "^7.2.1",
