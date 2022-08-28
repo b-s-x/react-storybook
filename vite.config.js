@@ -7,8 +7,14 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: [
-      { find: '@', replacement: path.resolve(__dirname, 'src') },
-      { find: '@common', replacement: path.resolve(__dirname, 'src/styles/common.scss') },
+      {
+        find: '@',
+        replacement: path.resolve(__dirname, './src'),
+      },
+      {
+        find: '@common',
+        replacement: path.resolve(__dirname, './src/styles/common.scss'),
+      },
     ],
   },
 })
