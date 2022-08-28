@@ -1,0 +1,20 @@
+.marker {
+  &_icon {
+    transform: scale(1);
+    transform-origin: 50% 50%;
+  }
+
+  &_image {
+    transform: scale(0);
+    transform-origin: 50% 50%;
+  }
+
+  &_text {
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    transform-origin: 50% 50%;
+    text-anchor: middle;
+  }
+}
